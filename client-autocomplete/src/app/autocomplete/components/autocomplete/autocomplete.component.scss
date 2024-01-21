@@ -1,0 +1,27 @@
+.autocomplete-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px;
+  position: relative;
+  
+  ::ng-deep input {
+    padding: 10px;
+    border: 1px solid #000000;
+  }
+}
+
+.autocomplete-options {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  border-top: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; 
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 10;
+}
+

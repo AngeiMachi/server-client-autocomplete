@@ -1,0 +1,18 @@
+
+<div class="autocomplete-container">
+   
+    <ng-content ></ng-content>
+    <app-autocomplete-options *ngIf="autocompleteOptions?.length!==0" 
+        class="autocomplete-options" 
+        [options]="autocompleteOptions" 
+        [template]="autocompleteOptionTemplate || defaultOptionsTemplate" 
+        [highlightedColor]="highlightedColor"
+        (optionSelected)="selectOption($event)"
+        (optionsClosed)="closeOptions()">
+        
+    </app-autocomplete-options>
+</div>
+
+<ng-template #defaultOptionsTemplate let-option>
+    <div >{{ option }}</div>
+</ng-template>

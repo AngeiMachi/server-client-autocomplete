@@ -1,0 +1,9 @@
+<div class="option-item" *ngFor="let option of options; let i = index" (click)="selectOption(option)"
+
+    [ngStyle]="{'background-color':getColor(i)}"
+    
+    (mouseenter)="highlightOption(i)">
+    <ng-container [ngTemplateOutlet]="template" [ngTemplateOutletContext]="{ $implicit: option }">
+ 
+    </ng-container>
+</div>

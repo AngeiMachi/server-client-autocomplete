@@ -1,0 +1,53 @@
+<main class="main">
+  <div class="content">
+    <h1>Simple:</h1>
+    <app-autocomplete  
+        [apiEndpoint]="apiEndpoint" 
+        (optionSelected)="onOptionSelected($event)" 
+        [limit]="10">
+      <input placeholder="Search cities..." type="text"  #autocompleteInput />
+    </app-autocomplete>
+  </div>
+  <div class="content">
+    <h1>Custom Options:</h1>
+    <app-autocomplete 
+        [highlightedColor]="['red','blue','green','yellow','orange','purple']"  
+        [apiEndpoint]="apiEndpoint" 
+        (optionSelected)="onOptionSelected($event)" 
+        [limit]="15">
+      <input placeholder="Search cities..." type="text"  #autocompleteInput />
+      <ng-template  let-option #autocompleteOptionTemplate>
+        <div class="custom-options">
+             <i class="material-icons">face</i><span>{{ option }}</span>
+        </div>
+      </ng-template> 
+    </app-autocomplete>
+  </div>
+  <div class="content">
+    <h1>With cache:</h1>
+    <app-autocomplete  
+        [apiEndpoint]="apiEndpoint" 
+        (optionSelected)="onOptionSelected($event)" 
+        [limit]="10"
+        [cacheSize]="1000">
+      <input placeholder="Search cities..." type="text"  #autocompleteInput />
+    </app-autocomplete>
+  </div>
+  <div class="content">
+    <h1>as a form control:</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="cities-form">
+      <app-autocomplete  
+          [apiEndpoint]="apiEndpoint" 
+          (optionSelected)="onOptionSelectedForm($event)" 
+          [limit]="10"
+          [cacheSize]="1000"
+         >
+        <input placeholder="Search cities..." type="text"  formControlName="autocomplete"  #autocompleteInput />
+      </app-autocomplete>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</main>
+
+<router-outlet />
