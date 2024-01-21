@@ -18,6 +18,10 @@
 .custom-options {
     display: flex;
     align-items: center;
+
+    i {
+        padding-right: 10px;
+    }
 }
 .cities-form {
     display: flex;
