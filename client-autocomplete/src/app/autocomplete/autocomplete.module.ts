@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { AutocompleteService } from './autocomplete.service';
 import { HttpClientModule } from '@angular/common/http';
-import { AutocompleteOptionsComponent } from './components/autocomplete-options/autocomplete-options/autocomplete-options.component';
+import { AutocompleteOptionsComponent } from './components/autocomplete-options/autocomplete-options.component';
 
 
 
@@ -14,7 +14,7 @@ import { AutocompleteOptionsComponent } from './components/autocomplete-options/
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule 
   ],
   exports:[
     AutocompleteComponent

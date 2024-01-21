@@ -5,7 +5,7 @@ import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Outpu
   templateUrl: './autocomplete-options.component.html',
   styleUrl: './autocomplete-options.component.scss'
 })
-export class AutocompleteOptionsComponent implements OnInit{
+export class AutocompleteOptionsComponent{
   private _options: string[] = [];
    @Input() set options(options: string[]) {
     this._options = options;
@@ -27,9 +27,6 @@ export class AutocompleteOptionsComponent implements OnInit{
 
   selectOption(option: string): void {
     this.optionSelected.emit(option);
-  }
-  ngOnInit(): void {
-    console.log(this.options);
   }
 
   @HostListener('document:keydown', ['$event'])
