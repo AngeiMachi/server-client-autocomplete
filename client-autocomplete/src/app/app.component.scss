@@ -25,3 +25,24 @@
     align-items: center;
     margin: 20px;
 }
+.input-search-custom-container {
+    position: relative;
+    
+
+    input {
+        padding: 10px 30px 10px 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        outline: none;
+        box-sizing: border-box;
+    }
+    i{
+        position: absolute;
+        top:8px;
+        left: 8px;
+    }
+}
+
+
+

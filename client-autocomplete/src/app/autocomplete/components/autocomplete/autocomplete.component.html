@@ -1,6 +1,4 @@
-
 <div class="autocomplete-container">
-   
     <ng-content ></ng-content>
     <app-autocomplete-options *ngIf="autocompleteOptions?.length!==0" 
         class="autocomplete-options" 
@@ -9,7 +7,6 @@
         [highlightedColor]="highlightedColor"
         (optionSelected)="selectOption($event)"
         (optionsClosed)="closeOptions()">
-        
     </app-autocomplete-options>
 </div>
 

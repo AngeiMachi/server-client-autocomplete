@@ -15,12 +15,16 @@
         [apiEndpoint]="apiEndpoint" 
         (optionSelected)="onOptionSelected($event)" 
         [limit]="15">
-      <input placeholder="Search cities..." type="text"  #autocompleteInput />
-      <ng-template  let-option #autocompleteOptionTemplate>
-        <div class="custom-options">
-             <i class="material-icons">face</i><span>{{ option }}</span>
+        <div class="input-search-custom-container">
+          <i class="material-icons">search</i>
+          <input placeholder="Search cities..." type="text"  #autocompleteInput />
         </div>
-      </ng-template> 
+      
+        <ng-template  let-option #autocompleteOptionTemplate>
+          <div class="custom-options">
+              <i class="material-icons">face</i><span>{{ option }}</span>
+          </div>
+        </ng-template> 
     </app-autocomplete>
   </div>
   <div class="content">
